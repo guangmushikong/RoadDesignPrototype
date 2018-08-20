@@ -29,7 +29,7 @@ class Ght_pro():
             line_str = str(line)
             try:
                 line_str0 = line_str.replace("'", "")
-                line_str1 = line_str0.replace(',', ' ')
+                line_str1 = line_str0.replace(',', '')
             except:
                 pass
             line_str2 = line_str1.replace('[', '')
@@ -56,6 +56,8 @@ class Ght_pro():
                 skw_line = ['%.5f'%float(line[2]), '%.5f'%float(line[1]), int(line[3]), 0, 0, 0, 0, 0, 0, 0, 0]
                 skw.append(skw_line)
             else:
+                if len(line[0]) == 6:
+                    line[0] = '0'+ line[0]
                 other_line = [line[0], '%.5f'%float(line[2]), '%.5f'%float(line[1]), int(line[3]), int(line[4])]
                 other.append(other_line)
         # print('skw:')
