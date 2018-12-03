@@ -72,8 +72,6 @@ class Ght_pro():
     def pro(self):
         self.read_ght()
 
-def main():
+if __name__=='__main__':
     ex = Ght_pro()
     ex.pro()
-
-main()
